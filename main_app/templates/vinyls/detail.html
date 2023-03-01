@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Vinyl List</h1>
+
+<div class="card">
+    <div class="card-content">
+        <span class="card-title">{{ vinyl.name }}</span>
+        <p>Artist: {{ vinyl.artist }}</p>
+        <p>Released: {{ vinyl.released }}</p>
+        <p>Label: {{ cat.label }}</p>
+        <div class="card-action">
+            <a href="{% url 'vinyls_update' vinyl.id %}">Edit</a>
+            <a href="{% url 'vinyls_delete' vinyl.id %}">Delete</a>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
