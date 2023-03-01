@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>vinyl List</h1>
+<h1>Vinyl List</h1>
 
 {% for vinyl in vinyls %}
   <div class="card">
@@ -12,6 +12,7 @@
       <p>Label: {{ cat.label }}</p>
     </div>
   </div>
+</a>
 {% endfor %}
 
 {% endblock %}

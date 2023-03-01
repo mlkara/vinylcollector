@@ -9,4 +9,6 @@ urlpatterns = [
   path('vinyls/create/', views.VinylCreate.as_view(), name='vinyls_create'),
   path('vinyls/<int:pk>/update/', views.VinylUpdate.as_view(), name='vinyls_update'),
   path('vinyls/<int:pk>/delete/', views.VinylDelete.as_view(), name='vinyls_delete'),
+  path('vinyls/<int:vinyl_id>/add_listening/', views.add_listening, name='add_listening'),
+
 ]
