@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Concert List</h1>
+
+{% for concert in concert_list %}
+  <a href="{% url 'concerts_detail' concert.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ concert.venue }}</span>
+            <p>City: {{ concert.city }}</p>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}
