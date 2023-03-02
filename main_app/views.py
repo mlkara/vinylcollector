@@ -47,5 +47,5 @@ def add_listening(request, vinyl_id):
     if form.is_valid():
         new_listening = form.save(commit=False)
         new_listening.vinyl_id = vinyl_id
-    new_listening.save()
+        new_listening.save()
     return redirect('detail', vinyl_id=vinyl_id)
